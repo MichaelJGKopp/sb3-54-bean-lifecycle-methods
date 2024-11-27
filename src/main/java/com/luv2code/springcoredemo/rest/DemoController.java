@@ -19,7 +19,7 @@ public class DemoController {
   //  }
 
   @Autowired
-  public void doSomeStuff(Coach myCoach) {
+  public void setMyCoach(Coach myCoach) {
     this.myCoach = myCoach;
   }
 
