@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component
-@Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE) // new instance each injection
+//@Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE) // new instance each injection
 public class CricketCoach implements Coach {
 
   public CricketCoach() {
