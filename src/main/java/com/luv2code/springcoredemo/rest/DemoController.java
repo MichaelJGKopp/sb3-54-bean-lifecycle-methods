@@ -13,13 +13,20 @@ public class DemoController {
 
   // define a constructor for dependency injection
 
+  //  @Autowired
+  //  public DemoController(Coach theCoach) {
+  //    this.myCoach = theCoach;
+  //  }
+
   @Autowired
-  public DemoController(Coach theCoach) {
-    this.myCoach = theCoach;
+  public void setMyCoach(Coach myCoach) {
+    this.myCoach = myCoach;
   }
 
   @GetMapping("/dailyworkout")
   public String getDailyWorkout() {
-    return myCoach.getDailyWorkout();
+    return "<html><body><p style='font-size:24px;'>"
+        + myCoach.getDailyWorkout()
+        + "</p></body></html>";
   }
 }
